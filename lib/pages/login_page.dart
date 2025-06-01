@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../services/api_service.dart';
+import '../models/usuario_model.dart';
 import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -69,6 +70,13 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: _fazerLogin,
                     child: const Text('Entrar'),
                   ),
+            const SizedBox(height: 16),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cadastro');
+              },
+              child: const Text('Ainda não tem conta? Cadastre-se'),
+            ),
           ],
         ),
       ),
